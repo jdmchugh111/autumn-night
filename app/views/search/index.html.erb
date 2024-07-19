@@ -1,0 +1,14 @@
+<h1>Search Results</h1>
+
+<h4>Total Members in this Nation: <%= @count %></h4>
+
+<% @members.each do |member| %>
+  <div id="member-<%= member.id %>">
+  <%= "Name: #{member.name}" %><br>
+  <%= image_tag("#{member.photo}", class: 'character-image') %><br>
+  <%= "Allies: #{member.allies}" %><br>
+  <%= "Enemies: #{member.enemies}" %><br>
+  <%= "Affiliation: #{member.affiliation}" %><br>
+  <br>
+  </div>
+<% end %>
